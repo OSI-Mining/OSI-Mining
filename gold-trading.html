@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSI Mining & Resources - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#000000',       // Black for backgrounds/nav/footer
+              secondary: '#fbbf24',     // Dark gold for headings, text highlights
+              accent: '#01122A',        // Dark navy/black for mobile menu, CTA backgrounds
+              bordergold: '#6d5324',    // Dark bronze/gold for borders
+            },
+            backgroundImage: {
+              'black-red-white': 'linear-gradient(to right, black, #ff0000)', 
+              'black-gold-soft': 'linear-gradient(135deg, #000000, #161309, #000000)',
+            },
+          },
+        },
+      }
+      </script>
+</head>
+<body class="bg-black-gold-soft text-white">
+
+
+              <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+                  * {
+                      margin: 0;
+                      padding: 0;
+                      box-sizing: border-box;
+                      font-family: 'Inter', sans-serif;
+                  }
+                  nav {
+                      background: black;
+                  }
+                  .nav-link {
+                      transition: all 0.3s ease;
+                  }
+                  .nav-link:hover {
+                      color: #d4af37 !important;
+                  }
+                  .metallic-gold {
+  background: linear-gradient(90deg, #d4af37 0%, #ffea70 50%, #d4af37 100%);
+  background-clip: text; /* standard fallback */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+                  .mobile-menu {
+                      transition: all 0.3s ease;
+                  }
+                  .tradingview-widget-container {
+  background-color: #000 !important;
+}
+              </style>
+            
+            
+            <nav class="fixed w-full z-50 bg-primary shadow-lg">
+              <div class=" container mx-auto px-4">
+                  <div class="flex justify-between items-center py-4">
+                      <a href="about.html" class="flex items-center space-x-2">
+                      <img src="content/ax.png" alt="OSI Mining Logo" class="w-8 h-8 object-contain">
+                      <span class="metallic-gold text-white text-xl font-bold">OSI Mining & Resources</span>
+                      </a>
+                          
+                                    <!-- Desktop Menu -->
+                                    <div class="hidden md:flex items-center space-x-8">
+                                      <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mining</a>
+                                      <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>                                    
+                                      <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a>
+                                      <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                             
+                                      <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                                      <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                                      <a href="contact.html" class="nav-link text-secondary hover:text-white">Contact</a>
+                                  </div>
+                                  
+                                  <!-- Mobile Menu Button -->
+                                  <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                                      <i data-feather="menu"></i>
+                                  </button>
+                              </div>
+                              
+                              <!-- Mobile Menu -->
+                              <div id="mobile-menu" class="hidden md:hidden mobile-menu bg-accent py-4 pb-8 mx-2 rounded-b-2xl shadow-xl border-t-2 border-gray-700">
+                                  <div class="flex flex-col space-y-4 px-4">
+                                      <a href="about.html" class="nav-link text-secondary hover:text-white">About OSI Mineing</a>
+                                      <a href="index.html" class="nav-link text-secondary hover:text-white">OSI Mines</a>
+                                      <a href="e-waste.html" class="nav-link text-secondary hover:text-white">Operations</a> 
+                                      <a href="tech.html" class="nav-link text-secondary hover:text-white">Technology</a>                          
+                                      <a href="investors.html" class="nav-link text-secondary hover:text-white">Investors</a>
+                                      <a href="gold-trading.html" class="nav-link text-secondary hover:text-white">Gold & Trading</a>
+                                      <a href="contact.html" class="nav-link text-secondary hover:text-white">Contact</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </nav>
+                      <div class="tradingview-widget-container w-full h-20 md:h-16 mb-4 bg-black">
+                        <div class="tradingview-widget-container__widget"></div>
+                      </div>
+                      
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+                      
+                      <script type="text/javascript">
+                      new TradingView.widget({
+                        "container_id": "tradingview-widget-container",
+                        "symbols": [
+                          { "proName": "NYSE:NEM", "title": "Newmont (Gold)" },
+                          { "proName": "NYSE:GOLD", "title": "Barrick Gold" },
+                          { "proName": "NASDAQ:PAAS", "title": "Pan American Silver" },
+                          { "proName": "NYSE:HL", "title": "Hecla Mining" },
+                          { "proName": "NYSE:SBSW", "title": "Stillwater Mining" },
+                          { "proName": "TSE:PDL", "title": "North American Palladium" },
+                          { "proName": "NYSE:FCX", "title": "Freeport-McMoRan" },
+                          { "proName": "NYSE:CDE", "title": "Coeur Mining" },
+                          { "proName": "NYSE:KGC", "title": "Kinross Gold" }
+                        ],
+                        "colorTheme": "dark",
+                        "isTransparent": true,
+                        "displayMode": "adaptive",
+                        "locale": "en"
+                      });
+                      </script>
+
+    
+    <!-- Unified Gradient Background Wrapper -->
+    <div class="bg-black-gold-soft text-white">
+      <!-- Header -->
+      <section class="pt-32 pb-20 px-4">
+          <div class="max-w-4xl mx-auto text-center">
+              <h1 class="text-5xl md:text-6xl text-secondary font-bold mb-6">Gold Refining & Trading</h1>
+              <p class="text-xl text-gray-300">Premium quality gold products and transparent trading practices</p>
+          </div>
+      </section>
+      <!-- Introduction and Product Grid -->
+      <section class="pt-16 px-4">
+        <div class="max-w-4xl mx-auto mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 text-secondary">Our Gold Products</h2>
+          <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+            At OSI Mining & Resources, we specialize in premium gold products obtained through advanced e-waste refinement processes. Our commitment to sustainability and quality ensures that every product meets the highest standards.
+          </p>
+        </div>
+        <!-- Tabbed interface for metals (Unified Container) -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="border-8 border-bordergold rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.8)] p-1 mb-12">
+            <div class="bg-black-gold-soft rounded-xl p-4 shadow-2xl">
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="gold" id="tab-gold">24K Gold</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="silver" id="tab-silver">Silver</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="platinum" id="tab-platinum">Platinum</button>
+              <button class="tab-btn px-4 py-2 rounded-xl text-secondary bg-black/30 font-semibold focus:outline-none transition-all duration-200" data-tab="palladium" id="tab-palladium">Palladium</button>
+            </div>
+            <!-- Tab Content Area -->
+            <div>
+              <!-- 24K Gold Tab -->
+              <div class="tab-content" id="tab-content-gold">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <!-- Gold Coin Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/gold-coin.jpg" alt="24K Gold" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">24K Refined Gold</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">Pure 24 karat gold refined to perfection, ideal for investment and jewelry crafting.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-gold" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-gold" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1g">1 g</option>
+                            <option value="5g">5 g</option>
+                            <option value="10g">10 g</option>
+                            <option value="1oz">1 oz</option>
+                            <option value="5oz">5 oz</option>
+                            <option value="10oz">10 oz</option>
+                            <option value="1kg">1 kilo</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-gold">$55.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Gold Bar Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/gold-bar.jpg" alt="24K Gold Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">24K Refined Gold Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">High-purity gold bars suitable for investment and collection.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-gold-bar" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-gold-bar" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1g">1 g</option>
+                            <option value="5g">5 g</option>
+                            <option value="10g">10 g</option>
+                            <option value="1oz">1 oz</option>
+                            <option value="5oz">5 oz</option>
+                            <option value="10oz">10 oz</option>
+                            <option value="1kg">1 kilo</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-gold-bar">$55.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Silver Tab -->
+              <div class="tab-content hidden" id="tab-content-silver">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- Silver Bar Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/silver-bar.jpg" alt="Silver Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">Fine Silver Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">Investment-grade silver bars, refined for purity and reliability.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-silver" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-silver" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1oz">1 oz</option>
+                            <option value="5oz">5 oz</option>
+                            <option value="10oz">10 oz</option>
+                            <option value="1kg">1 kilo</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-silver">$27.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Silver Coin Card -->
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/silver-coin.jpg" alt="Fine Silver Coin" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">Fine Silver Coin</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">Silver coins minted to perfection, ideal for investors and collectors.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-silver-coin" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-silver-coin" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1oz">1 oz</option>
+                            <option value="5oz">5 oz</option>
+                            <option value="10oz">10 oz</option>
+                            <option value="1kg">1 kilo</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-silver-coin">$27.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Platinum Tab -->
+              <div class="tab-content hidden" id="tab-content-platinum">
+                <div class="flex justify-center">
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/platinum-ingot.jpg" alt="Platinum Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">Platinum Ingot</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">High-purity platinum ingots, trusted by investors and industry professionals.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-platinum" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-platinum" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1oz">1 troy ounce</option>
+                            <option value="5oz">5 ounces</option>
+                            <option value="10oz">10 ounces</option>
+                            <option value="1kg">1 kilogram</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-platinum">$950.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Palladium Tab -->
+              <div class="tab-content hidden" id="tab-content-palladium">
+                <div class="flex justify-center">
+                  <div class="bg-black/40 border-2 border-bordergold rounded-xl p-6 shadow-2xl flex flex-col">
+                    <div class="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[3/2] flex flex-col justify-end">
+                      <img src="content/palladium-bar.jpg" alt="Palladium Bar" class="absolute inset-0 w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                      <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center md:justify-center items-center md:items-center">
+                        <h3 class="text-xl sm:text-lg md:text-2xl font-bold mb-2 text-secondary">Palladium Bar</h3>
+                        <p class="text-gray-300 mb-2 flex-grow text-base sm:text-sm md:text-lg">Premium palladium bars, refined for industrial and investment purposes.</p>
+                        <div class="flex flex-col mb-2">
+                          <label for="weight-select-palladium" class="text-gray-300 mb-1 block mt-2">Select Weight:</label>
+                          <select id="weight-select-palladium" class="mb-2 p-2 rounded bg-gray-800 text-white">
+                            <option value="1g">1g</option>
+                            <option value="5g">5g</option>
+                            <option value="10g">10g</option>
+                            <option value="1oz">1oz</option>
+                          </select>
+                          <div class="text-secondary font-semibold text-base sm:text-sm md:text-lg mt-1" id="price-palladium">$1,350.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Types of Gold We Trade Section (Integrated with Product Cards) -->
+      <section class="px-4 text-center">
+          <div class="max-w-4xl mx-auto mb-12">
+            <a href="#goldContactForm" class="text-3xl font-bold mb-4 text-secondary hover:underline hover:text-yellow-300 transition-all duration-300">
+              For Questions or Concerns About Bullion, Please Contact us Below
+            </a>
+          </div>
+        </section>
+
+      <!-- Quality Standards -->
+      <section class="py-16 px-4">
+          <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold mb-8 text-secondary text-center">Quality Standards</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="bg-primary bg-opacity-80 rounded-xl p-6">
+                      <div class="text-secondary mb-4">
+                          <i data-feather="award" class="w-8 h-8"></i>
+                      </div>
+                      <h3 class="text-xl font-bold mb-3">LBMA Certified</h3>
+                      <p class="text-gray-300">All our gold products meet London Bullion Market Association standards for purity and quality.</p>
+                  </div>
+                  <div class="bg-primary bg-opacity-80 rounded-xl p-6">
+                      <div class="text-secondary mb-4">
+                          <i data-feather="check-circle" class="w-8 h-8"></i>
+                      </div>
+                      <h3 class="text-xl font-bold mb-3">Ethical Sourcing</h3>
+                      <p class="text-gray-300">Committed to responsible and transparent sourcing practices throughout our supply chain.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Partner With Us -->
+      <section class="py-16 px-4">
+          <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold mb-8 text-secondary text-center">Partner With Us</h2>
+              <p class="text-lg text-gray-300 mb-8">
+                  We partner with leading financial institutions, jewelers, and industrial clients worldwide. Our commitment to quality and transparency makes us the preferred choice for gold trading partnerships.
+              </p>
+          </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="gold-contact" class="py-16 px-4">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">Contact Our Trading Team</h2>
+          <form id="goldContactForm" class="space-y-6 bg-black/50 border-4 border-bordergold rounded-xl p-8 shadow-2xl">
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+              <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your full name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your email">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+              <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Enter your company name">
+            </div>
+            
+            <!-- Gold Weight Select -->
+            <div>
+              <label  class="block text-sm font-medium text-gray-300 mb-2">Select Gold Weight</label>
+              <select id="weight-select" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent">
+                <option value="1g">1g</option>
+                <option value="5g">5g</option>
+                <option value="10g">10g</option>
+                <option value="1oz">1oz</option>
+                <option value="5oz">5oz</option>
+                <option value="10oz">10oz</option>
+                <option value="1kg">1kg</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Tell us about your trading requirements"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-black-red-white text-white  text-primary py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300">
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer class="bg-primary text-white py-12">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          
+          <!-- Brand / About -->
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-secondary">OSI Mining & Resources</h3>
+            <p class="text-gray-300 mb-6">
+              Pioneering sustainable mining and responsible resource management for a better future.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="footer-link text-gray-300 hover:text-white transition-colors">
+                <i data-feather="linkedin" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Quick Links</h4>
+            <ul class="flex flex-col space-y-2">
+              <li><a href="index.html" class="footer-link text-gray-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="e-waste.html" class="footer-link text-gray-300 hover:text-white transition-colors">E-Waste Recycling</a></li>
+              <li><a href="gold-trading.html" class="footer-link text-gray-300 hover:text-white transition-colors">Gold & Trading</a></li>
+            </ul>
+          </div>
+          
+
+          
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4 text-secondary">Contact Info</h4>
+        <div class="space-y-3 text-gray-300">
+          <p class="flex items-center space-x-2">
+            <i data-feather="map-pin"></i>
+            <span>208 Haystack Butte, Farson, Wyoming 82932</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <i data-feather="phone"></i>
+            <span>+1 (307)-371-2993</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <i data-feather="mail"></i>
+            <span>Info@osiminingandresources.com</span>
+          </p>
+        </div>
+      </div>
+    
+        </div>
+    
+    
+        <!-- Bottom copyright -->
+        <div class="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400 text-sm">
+          <p>&copy; 2024 OSI Mining Resources. All rights reserved.</p>
+        </div>
+        <!-- Footer Disclosure -->
+        <div class="mt-8 px-6 md:px-12 text-center text-gray-500 text-xs max-w-5xl mx-auto leading-relaxed">
+          <p>
+            This website and its content are for informational purposes only and do not constitute an offer to sell
+            or a solicitation of an offer to buy any securities. Forward-looking statements are subject to risks and
+            uncertainties that could cause actual results to differ materially. Readers should not rely solely on the
+            information provided herein and are encouraged to conduct their own due diligence.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Prices for each tab product and weights
+      const prices = {
+        gold: {
+          "1g": 162.65,
+          "5g": 813.24,
+          "10g": 1626.48,
+          "1oz": 4355.90,
+          "5oz": 22094.50,
+          "10oz": 43363.00,
+          "1kg": 138647.40
+        },
+        "gold-bar": {
+          "1g": 162.65,
+          "5g": 813.24,
+          "10g": 1626.48,
+          "1oz": 4355.90,
+          "5oz": 22094.50,
+          "10oz": 43363.00,
+          "1kg": 138647.40
+        },
+        silver: {
+          "1oz": 59.02,
+          "5oz": 290.08,
+          "10oz": 650.16,
+          "1kg": 1878.32
+        },
+        "silver-coin": {
+          "1oz": 59.02,
+          "5oz": 290.08,
+          "10oz": 650.16,
+          "1kg": 1878.32
+        },
+        platinum: {
+          "1oz": 1854.02,
+          "5oz": 9770.10,
+          "10oz": 19540.20,
+          "1kg": 63075.58
+        },
+        palladium: {
+          "1g": 1350.00,
+          "5g": 6650.00,
+          "10g": 13200.00,
+          "1oz": 42000.00
+        }
+      };
+
+      function updatePrice(productId, weight) {
+        const priceElement = document.getElementById(`price-${productId}`);
+        if (prices[productId] && prices[productId][weight]) {
+          priceElement.textContent = `$${prices[productId][weight].toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+      }
+
+      // Tab switching
+      document.addEventListener('DOMContentLoaded', () => {
+        // Tab logic
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        function activateTab(tab) {
+          tabBtns.forEach(btn => {
+            if (btn.dataset.tab === tab) {
+              btn.classList.add('bg-secondary', 'text-black');
+              btn.classList.remove('text-secondary', 'bg-black/30');
+            } else {
+              btn.classList.remove('bg-secondary', 'text-black');
+              btn.classList.add('text-secondary', 'bg-black/30');
+            }
+          });
+          tabContents.forEach(content => {
+            if (content.id === `tab-content-${tab}`) {
+              content.classList.remove('hidden');
+            } else {
+              content.classList.add('hidden');
+            }
+          });
+        }
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => activateTab(btn.dataset.tab));
+        });
+        // Activate the first tab by default
+        activateTab('gold');
+
+        // Set default prices for each tab and new cards
+        [
+          'gold',
+          'gold-bar',
+          'silver',
+          'silver-coin',
+          'platinum',
+          'palladium'
+        ].forEach(productId => {
+          const select = document.getElementById(`weight-select-${productId}`);
+          if (select) {
+            updatePrice(productId, select.value);
+            select.addEventListener('change', function() {
+              updatePrice(productId, this.value);
+            });
+          }
+        });
+      });
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
